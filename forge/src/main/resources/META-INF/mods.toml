@@ -4,7 +4,7 @@ loaderVersion = "[35,)"
 license = "Insert License Here"
 
 [[mods]]
-modId = "examplemod"
+modId = "satiscraftory"
 version = "${version}"
 displayName = "Example Mod"
 authors = "Me!"

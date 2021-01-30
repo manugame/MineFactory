@@ -1,11 +1,11 @@
-package net.examplemod;
+package fr.satiscraftory;
 
 import me.shedaniel.architectury.annotations.ExpectPlatform;
 import me.shedaniel.architectury.platform.Platform;
 
 import java.io.File;
 
-public class ExampleExpectPlatform {
+public class SatiscraftoryExpectPlatform {
     /**
      * We can use {@link Platform#getConfigFolder()} but this is just an example of {@link ExpectPlatform}.
      * <p>
