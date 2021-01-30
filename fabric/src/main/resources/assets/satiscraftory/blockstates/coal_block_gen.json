@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "satiscraftory:block/coal_block_gen" }
+  }
+}
