@@ -6,12 +6,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-import java.util.function.Supplier;
-
 public class TabRegistry {
 
-    // Registering a new creative tab
-    public static final CreativeModeTab MAIN_TAB = CreativeTabs.create(new ResourceLocation(SatiscraftoryMod.MOD_ID, "satisfactory_tab"), () -> {
+    public static final CreativeModeTab MAIN_TAB = CreativeTabs.create(new ResourceLocation(SatiscraftoryMod.MOD_ID, "satiscraftory_main"), () -> {
+        return new ItemStack(ItemRegistry.XENON_ZAPPER.get());
+    });
+
+    public static final CreativeModeTab BLOCK_GEN_TAB = CreativeTabs.create(new ResourceLocation(SatiscraftoryMod.MOD_ID, "satiscraftory_blockgen_tab"), () -> {
         return new ItemStack(ItemRegistry.XENON_ZAPPER.get());
     });
 

@@ -1,7 +1,6 @@
 package fr.satiscraftory.registry;
 
 import fr.satiscraftory.SatiscraftoryMod;
-import fr.satiscraftory.blocks.CoalBlock;
 import me.shedaniel.architectury.registry.DeferredRegister;
 import me.shedaniel.architectury.registry.RegistrySupplier;
 import net.minecraft.core.Registry;
@@ -19,7 +18,31 @@ public class BlockRegistry {
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(SatiscraftoryMod.MOD_ID, Registry.BLOCK_REGISTRY);
 
     public static final RegistrySupplier<Block> COAL_BLOCK_GEN = createBlock("coal_block_gen", () -> {
-        return new CoalBlock(BlockBehaviour.Properties.of(Material.STONE));
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> IRON_BLOCK_GEN = createBlock("iron_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> COPPER_BLOCK_GEN = createBlock("copper_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> CATERIUM_BLOCK_GEN = createBlock("caterium_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> EME_BLOCK_GEN = createBlock("eme_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> QUARTZ_BLOCK_GEN = createBlock("quartz_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
+    });
+
+    public static final RegistrySupplier<Block> URANIUM_BLOCK_GEN = createBlock("uranium_block_gen", () -> {
+        return new Block(BlockBehaviour.Properties.of(Material.STONE));
     });
 
 
@@ -27,12 +50,10 @@ public class BlockRegistry {
         BLOCKS.register();
     }
 
-
     private static RegistrySupplier<Block> createBlock(String id, Supplier<Block> block) {
 
-        RegistrySupplier<Block> rblock = BLOCKS.register(id, block);
-        ItemRegistry.ITEMS.register("item_" + id, () -> new BlockItem(rblock
-                .get(), new Item.Properties().tab(TabRegistry.MAIN_TAB)));
-        return rblock;
+        RegistrySupplier<Block> registryBlock = BLOCKS.register(id, block);
+        ItemRegistry.ITEMS.register("item_" + id, () -> new BlockItem(registryBlock.get(), new Item.Properties().tab(TabRegistry.BLOCK_GEN_TAB)));
+        return registryBlock;
     }
 }

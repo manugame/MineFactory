@@ -1,4 +1,6 @@
 {
   "item.satiscraftory.xeno_zapper": "Xeno Zapper",
-  "block.satiscraftory.coal_block_gen": "Coal block for Gen"
+  "block.satiscraftory.coal_block_gen": "Coal block for Gen",
+  "itemGroup.satiscraftory.satiscraftory_main": "Satiscraftory",
+  "itemGroup.satiscraftory.satiscraftory_blockgen_tab": "Satiscraftory blockgen"
 }
